@@ -4,6 +4,7 @@
 [multi-language support](https://vuepress.vuejs.org/guide/i18n.html#site-level-i18n-config).
 
 Translations for large projects can be a pain... This plugin aims to solve:
+* Easier support for partial translations
 * Jumping back to the root when a user hits untranslated content
 * Manual copy/symlink build workarounds
 
@@ -25,13 +26,13 @@ Produces the following behaviour:
 
 ## Usage
 
-1. 
+1. Install plugin
 ```
 yarn add vuepress-plugin-i18n-fallback -D 
 # OR npm install vuepress-plugin-i18n-fallback -D
 ```
 
-2.
+2. Enable plugin
 ```
 //.vuepress/config.js
 module.exports = {
@@ -41,12 +42,15 @@ module.exports = {
 }
 ```
 
+## Issues
+
+1. Links on fallback pages are currently not rewritten.
+    * In the example above, links on `<site>/zh/bar.html` will jump back to the default locale.
+
 ## Example
 
 A minimal example has been provided in the `example` directory of this repo. To get started:
 
 ```
-cd example
-yarn install
-yarn docs:dev
+yarn --cwd example install && yarn --cwd example docs:dev
 ```
