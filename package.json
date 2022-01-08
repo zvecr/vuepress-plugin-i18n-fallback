@@ -1,0 +1,8 @@
+{
+  "name": "vuepress-plugin-i18n-fallback",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:zvecr/vuepress-plugin-i18n-fallback.git",
+  "author": "zvecr <git@zvecr.com>",
+  "license": "MIT"
+}
